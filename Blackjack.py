@@ -2,7 +2,7 @@ import random
 
 mazo = []
 jugadores = []
-experimentar = []
+ganadores = []
 def generar_mazos(n):
     global mazo
     if n>0:
@@ -46,15 +46,18 @@ def ver_cartas_finales():
     print (len(mazo))
     return len(mazo)
 def experimentar (rep,n):
+    global ganadores
+    for p in range (n):
+        ganadores.insert(p, 0)
     for i in range (rep):
         for j in range (n):
-            jugadores.insert(i, jugar(m))
-            if jugadores[i]==21
-        return mazo
-    return
+            jugadores.insert(i, jugar(mazo))
+            if (jugadores[i]==21):
+                ganadores[i] = ganadores [i] + 1
+    for l in range (len(ganadores)):
+        print ("El jugador " + str(l+1) + " gano " + str(ganadores[l]) + " veces.")
 
 
-generar_mazos(4)
-jugar_varios(mazo,4)
-ver_quien_gano(jugadores)
-ver_cartas_finales()
+#generar_mazos(4)gut
+#experimentar (3, 4)
+#VER_CARTAS_FINALES()
