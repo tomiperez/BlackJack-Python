@@ -52,6 +52,7 @@ def ver_cartas_finales():
 
 def experimentar (rep,n):
     global ganadores
+    generar_mazos(n)
     for p in range (n):
         ganadores.insert(p, 0)
     for i in range (rep):
@@ -63,6 +64,5 @@ def experimentar (rep,n):
         print ("El jugador " + str(l+1) + " gano " + str(ganadores[l]) + " veces.")
 
 
-generar_mazos(4)
-experimentar (3, 4)
+experimentar (4, 5)
 ver_cartas_finales()
